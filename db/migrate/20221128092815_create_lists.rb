@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateLists < ActiveRecord::Migration[7.0]
   def change
     create_table :lists do |t|
@@ -10,7 +12,6 @@ class CreateLists < ActiveRecord::Migration[7.0]
       t.integer :clean, default: 30, null: false
 
       t.timestamps
-
     end
 
     add_index :lists, :email, unique: true

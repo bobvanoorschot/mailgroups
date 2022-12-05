@@ -13,5 +13,4 @@ class SearchListComponent < ViewComponent::Base
   def initialize(resource: nil)
     @resource = resource
   end
-
 end
