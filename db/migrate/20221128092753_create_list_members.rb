@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateListMembers < ActiveRecord::Migration[7.0]
   def change
     create_table :list_members do |t|
@@ -8,7 +10,7 @@ class CreateListMembers < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :list_members, [:list_id, :email], unique: true
+    add_index :list_members, %i[list_id email], unique: true
     add_index :list_members, :name, unique: true
   end
 end

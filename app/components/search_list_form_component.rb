@@ -34,7 +34,7 @@ class SearchListBuilder < ActionView::Helpers::FormBuilder
   def button(tag_value = nil, options = {}, &)
     options.merge!({
                      type: 'submit',
-                     class: 'absolute inset-0 right-auto group',
+                     class: 'absolute inset-0 right-auto group'
                    })
 
     @template.button_tag(
@@ -45,7 +45,7 @@ class SearchListBuilder < ActionView::Helpers::FormBuilder
   def input_search(method, _tag_value, options = {})
     options.merge!({
                      placeholder: 'Search...',
-                     class: 'form-input w-full pl-9 focus:border-slate-300',
+                     class: 'form-input w-full pl-9 focus:border-slate-300'
                    })
 
     @template.label(@object_name, method, class: 'sr-only') +

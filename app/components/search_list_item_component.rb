@@ -18,14 +18,14 @@ class SearchListItemComponent < ViewComponent::Base
       data: {
         turbo_frame: "#{@item.model_name.singular}_form",
         action: 'click->search-list#selectItem',
-        search_list_target: 'item',
+        search_list_target: 'item'
       },
       class: class_names(
         'flex items-center justify-between w-full p-2 rounded', {
-        'bg-indigo-100': active?,
-        'text-slate-300': @item.new_record?,
-      }
-      ),
+          'bg-indigo-100': active?,
+          'text-slate-300': @item.new_record?
+        }
+      )
     }
 
     turbo_frame_tag dom_id(@item, 'list') do
