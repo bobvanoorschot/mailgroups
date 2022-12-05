@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mailgroups</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="font-inter antialiased bg-slate-100 text-slate-600">
+  <div class="flex h-screen overflow-hidden">
+    <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+      <%= yield %>
+    </div>
+  </div>
+  </body>
+</html>
