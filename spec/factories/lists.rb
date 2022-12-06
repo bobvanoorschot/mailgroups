@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :list do
-    account { nil }
+    account
     name { "My list" }
     email { "group@example.com" }
     description { "Simple description" }
